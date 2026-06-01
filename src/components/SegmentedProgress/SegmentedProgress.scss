@@ -2,18 +2,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #F9F8F3;
-  padding: 40px;
-  border-radius: 16px;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
   width: fit-content;
 
   .segmented-progress-wrapper {
     position: relative;
-    width: 180px;
-    height: 180px;
+    width: 90px;
+    height: 90px;
 
     .svg-rotate {
-      transform: rotate(-8deg); // Rotates SVG so the top segment is perfectly centered at 12 o'clock
+      transform: rotate(5deg); // Rotates SVG so the top segment is perfectly centered at 12 o'clock
     }
 
     .progress-circle-active {

@@ -6,17 +6,22 @@ const SegmentedProgress = ({ value = 68 }) => {
   const normalizedValue = Math.min(Math.max(value, 0), 100);
 
   // SVG Configuration
-  const radius = 50;
-  const strokeWidth = 14;
+  const radius = 60;
+  const strokeWidth = 16;
   const viewBoxSize = 200;
   const center = viewBoxSize / 2;
   const circumference = 2 * Math.PI * radius;
 
-  // 1. Calculate Dash Array for the 4 distinct background segments
-  // We want 4 segments. Let's make each segment take ~18% and gaps take ~7% of the circle.
-  const bgSegment = circumference * 0.18;
-  const bgGap = circumference * 0.07;
+  // 1. Calculate Dash Arrays for background and active segments
+  // Background (light purple): longer segments with smaller gaps
+  const bgSegment = circumference * 0.21;
+  const bgGap = circumference * 0.04;
   const bgDashArray = `${bgSegment} ${bgGap}`;
+
+  // Active (dark purple): shorter segments with larger gaps
+  const activeSegment = circumference * 0.11;
+  const activeGap = circumference * 0.14;
+  const activeDashArray = `${activeSegment} ${activeGap}`;
 
   // 2. Calculate Dash Offset for the active progressive overlay
   // The active stroke overlays on top of the segments based on the percentage.
@@ -50,7 +55,7 @@ const SegmentedProgress = ({ value = 68 }) => {
             fill="transparent"
             stroke="#703ED1" /* Active dark purple color */
             strokeWidth={strokeWidth}
-            strokeDasharray={bgDashArray}
+            strokeDasharray={activeDashArray}
             strokeDashoffset={strokeDashoffset}
             strokeLinecap="butt"
             className="progress-circle-active"

@@ -1,6 +1,6 @@
 .featured-research-card {
   flex: 2.2;
-  background-color: #FAF8F2;
+  background-color: #F6F4EC;
   display: flex;
   flex-direction: row;
 
@@ -92,25 +92,27 @@
   .impact-factor-section {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 24px;
 
     .impact-text {
       display: flex;
       flex-direction: column;
-      gap: 2px;
+      gap: 6px;
 
       .impact-label {
-        font-size: 0.65rem;
-        font-weight: 700;
-        letter-spacing: 0.1em;
-        color: #B1ADC1;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.15em;
+        color: #9B95AB;
         font-family: var(--font-sans);
+        text-transform: uppercase;
       }
 
       .impact-value {
-        font-size: 1.1rem;
-        font-weight: 700;
+        font-size: 1.35rem;
+        font-weight: 800;
         color: #120A33;
+        letter-spacing: -0.01em;
         font-family: var(--font-sans);
       }
     }

@@ -57,7 +57,7 @@ function ArticlesSection({ searchQuery, selectedTopic, selectedSpecialty, active
   };
 
   return (
-    <section className="articles-section">
+    <section className={`articles-section ${isSearching ? 'has-search-padding' : ''}`}>
       {filteredArticles.length === 0 ? (
         <div className="no-results">
           <p>0 items found matching your search.</p>
