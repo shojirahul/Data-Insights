@@ -1,7 +1,7 @@
 .quick-insight-card {
   width: 100%;
   height: fit-content;
-  background-color: #F6F4EC;
+  background-color: var(--color-card-bg-light);
   border-radius: 28px;
   padding: 32px;
   position: relative;
@@ -24,7 +24,7 @@
     left: 0;
     bottom: 0;
     width: 4px;
-    background-color: #8C5AF3;
+    background-color: var(--color-accent-purple);
   }
 
   &-inner {
@@ -38,7 +38,7 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 16px;
-    color: #8C5AF3;
+    color: var(--color-accent-purple);
   }
 
   .quick-insight-tag {
@@ -50,13 +50,13 @@
   }
 
   .quick-insight-icon {
-    color: #888888;
+    color: var(--color-text-gray-medium);
   }
 
   .quick-insight-title {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #111111;
+    color: var(--color-dark-text);
     margin-bottom: 24px;
   }
 
@@ -80,13 +80,13 @@
 
   .quick-insight-metric-label {
     font-size: 0.85rem;
-    color: #555555;
+    color: var(--color-text-gray-darker);
   }
 
   .quick-insight-metric-value {
     font-size: 1.25rem;
     font-weight: 700;
-    color: #8C5AF3;
+    color: var(--color-accent-purple);
   }
 
   .quick-insight-link {
@@ -96,7 +96,7 @@
     margin-top: 32px;
     font-size: 0.85rem;
     font-weight: 700;
-    color: #8C5AF3;
+    color: var(--color-accent-purple);
     text-decoration: none;
     transition: opacity 0.2s ease;
 
