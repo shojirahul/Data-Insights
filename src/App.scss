@@ -1,3 +1,16 @@
+// Responsive visibility utilities
+.mobile-only {
+  @media (min-width: 769px) {
+    display: none !important;
+  }
+}
+
+.desktop-only {
+  @media (max-width: 768px) {
+    display: none !important;
+  }
+}
+
 .app-wrapper {
   float: left;
   width: 100%;
@@ -35,10 +48,10 @@
     border-radius: 50%;
 
     &-left {
-      top: -15%;
-      left: -5%;
+      top: -8%;
+      left: -15%;
       width: 70%;
-      height: 50%;
+      height: 70%;
       background: var(--color-accent-blur);
       opacity: 0.35;
       filter: blur(120px);
@@ -46,9 +59,9 @@
 
     &-right {
       bottom: -15%;
-      right: -10%;
-      width: 60%;
-      height: 45%;
+      right: -18%;
+      width: 80%;
+      height: 55%;
       background: var(--color-accent-blue);
       opacity: 0.3;
       filter: blur(130px);
@@ -153,5 +166,34 @@
       width: 20px;
       height: 20px;
     }
+  }
+
+  .cta-button-desktop {
+    background-color: var(--color-button-bg);
+    color: var(--color-button-text);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 14px 36px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    margin-bottom: 28px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      opacity: 0.92;
+    }
+  }
+
+  .hero-volume {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
   }
 }

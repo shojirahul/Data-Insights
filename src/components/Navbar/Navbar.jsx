@@ -1,8 +1,22 @@
 import { useState } from 'react'
 import './Navbar.scss'
 
+const navItems = [
+  { label: 'Perspectives', href: '#perspectives' },
+  { label: 'Research', href: '#research' },
+  { label: 'Events', href: '#events' },
+  { label: 'Innovation', href: '#innovation' },
+  { label: 'About', href: '#about' },
+]
+
 function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [activeLink, setActiveLink] = useState('Perspectives')
+
+  const handleNavClick = (label) => {
+    setActiveLink(label)
+    setMobileMenuOpen(false)
+  }
 
   return (
     <header className="navbar">
@@ -22,11 +36,16 @@ function Navbar() {
         </button>
 
         <nav className={`navbar-links ${mobileMenuOpen ? 'mobile-open' : ''}`}>
-          <a href="#perspectives" className="nav-link active">Perspectives</a>
-          <a href="#research" className="nav-link">Research</a>
-          <a href="#events" className="nav-link">Events</a>
-          <a href="#innovation" className="nav-link">Innovation</a>
-          <a href="#about" className="nav-link">About</a>
+          {navItems.map(({ label, href }) => (
+            <a
+              key={label}
+              href={href}
+              className={`nav-link ${activeLink === label ? 'active' : ''}`}
+              onClick={() => handleNavClick(label)}
+            >
+              {label}
+            </a>
+          ))}
           <div className="navbar-mobile-actions">
             <a href="#back" className="btn-secondary">Back to athenahealth</a>
           </div>
