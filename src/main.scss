@@ -1,0 +1,33 @@
+// Define CSS Variables for sitewide use
+:root {
+  // Colors
+  --color-primary-bg: #1A1345;
+  --color-secondary-bg: #160F41;
+  --color-accent-blur: #7141C4;
+  --color-text-main: #ffffff;
+  --color-text-muted: rgba(255, 255, 255, 0.45);
+  --color-button-bg: #ffffff;
+  --color-button-text: #000000;
+  
+  // Fonts
+  --font-sans: 'Nimbus Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-serif: 'PT Serif', serif;
+  --font-mono: 'Source Code Pro', monospace;
+}
+
+// Reset and base styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-primary-bg);
+  color: var(--color-text-main);
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

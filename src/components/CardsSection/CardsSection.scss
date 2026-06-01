@@ -1,0 +1,38 @@
+.cards-section {
+  background-color: rgba(251, 249, 241, 1);
+  padding: 80px 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    padding: 40px 20px;
+  }
+}
+
+.cards-container {
+  display: flex;
+  gap: 32px;
+  max-width: 1320px;
+  width: 100%;
+  align-items: stretch;
+
+  @media (max-width: 1100px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+// Card Base Styling
+.card {
+  border-radius: 36px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  }
+}
