@@ -1,13 +1,13 @@
 .cards-section {
   background-color: rgba(251, 249, 241, 1);
-  padding: 80px 40px;
+  padding: 120px 40px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 
   @media (max-width: 768px) {
-    padding: 40px 20px;
+    display: none;
   }
 }
 

@@ -5,8 +5,8 @@
   width: 100%;
   z-index: 10;
   padding: 24px 0;
-  background-color: rgba(22, 15, 65, 0.37);
-  backdrop-filter: blur(24px);
+  background-color: #160F41CC;
+  opacity: 80%;
 
   &-container {
     max-width: 1400px;
@@ -74,7 +74,7 @@
 
     @media (max-width: 768px) {
       display: none;
-      
+
       &.mobile-open {
         display: flex;
         flex-direction: column;
@@ -183,6 +183,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
